@@ -1,0 +1,75 @@
+PS C:\users\rhett\desktop\gittest> New-Item index.html -type file
+
+
+    Directory: C:\users\rhett\desktop\gittest
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        8/14/2017   3:18 PM              0 index.html
+
+
+PS C:\users\rhett\desktop\gittest> New-Item styles.css -type file
+
+
+    Directory: C:\users\rhett\desktop\gittest
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        8/14/2017   3:18 PM              0 styles.css
+
+
+PS C:\users\rhett\desktop\gittest> New-Item aboutMe.txt -type file
+
+
+    Directory: C:\users\rhett\desktop\gittest
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        8/14/2017   3:18 PM              0 aboutMe.txt
+
+
+PS C:\users\rhett\desktop\gittest> git init
+Initialized empty Git repository in C:/Users/rhett/Desktop/gittest/.git/
+PS C:\users\rhett\desktop\gittest> git add .
+PS C:\users\rhett\desktop\gittest> git commit -m "I'm doing this because they're making me"
+[master (root-commit) 3905bed] I'm doing this because they're making me
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aboutMe.txt
+ create mode 100644 index.html
+ create mode 100644 styles.css
+PS C:\users\rhett\desktop\gittest> notepad aboutMe.txt
+PS C:\users\rhett\desktop\gittest> git add .
+PS C:\users\rhett\desktop\gittest> git commit -m "updated aboutMe"
+[master a7ebe2b] updated aboutMe
+ 1 file changed, 1 insertion(+)
+PS C:\users\rhett\desktop\gittest> notepad aboutMe.txt
+PS C:\users\rhett\desktop\gittest> git add .
+PS C:\users\rhett\desktop\gittest> git commit -m "added favorite movie to aboutMe"
+[master df50b97] added favorite movie to aboutMe
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\users\rhett\desktop\gittest> git log
+commit df50b975c3e0ca02201ffe5457bf41b4df2fe41a (HEAD -> master)
+Author: rhettman360 <rhettman360@gmail.com>
+Date:   Mon Aug 14 15:33:12 2017 -0700
+
+    added favorite movie to aboutMe
+
+commit a7ebe2b15147d57625f5d098c2d8b6959e716410
+Author: rhettman360 <rhettman360@gmail.com>
+Date:   Mon Aug 14 15:26:33 2017 -0700
+
+    updated aboutMe
+
+commit 3905bed1981835fd81e9faf7692764f4315604ac
+Author: rhettman360 <rhettman360@gmail.com>
+Date:   Mon Aug 14 15:19:24 2017 -0700
+
+    I'm doing this because they're making me
+PS C:\users\rhett\desktop\gittest> git revert -n HEAD
+PS C:\users\rhett\desktop\gittest> git commit -m "changed movie to book"
+[master 5673486] changed movie to book
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+PS C:\users\rhett\desktop\gittest>

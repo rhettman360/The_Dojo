@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Interwebs</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <img src="./images/globe.png" alt="Globe" id="globe">
+        <p id="headtitle">The Inter<span class="blue">net</span></p>
+        <p id="contentbar" class="contentbartxt">&emsp;The World Wide Web</p>
+      </div>
+      <div id="sidebar">
+        <p id="blacktext">So, what's an <span class="orange">Internet?</span></p>
+        <p id="sidetext">An <span class="blue">inter</span>connected <span class="blue">Net</span>work of computers all around the world!</p>
+        <p class="sidebutton" id="bluebutton">WATCH A VIDEO</p>
+        <p class="sidebutton" id="orangebutton">MORE RESOURCES</p>
+        <p class="imjustaline"></p>
+        <div id="adspace">
+          <img src="./images/ad_crop.png" alt="ad background" id="adbackground">
+          <p id="adtext" class="white">Reinvent your career in just 14 weeks</p>
+          <img src="./images/ninja.png" alt="Ninja" id="adninja">
+          <p id="adbutton">Learn More >>></p>
+        </div>
+      </div>
+      <div id="main_content">
+        <div id="main_header">
+          <img src="./images/home.png" alt="Home" id="home">
+          <p class="blue" id="bodytitle">DNS</p>
+          <div id="contactwrapper">
+            <img src="./images/phone.png" alt="Phone" id="phone">
+            <div id="textwrapper">
+              <p id="contacttxt">Mon - Fri 9 a.m. - 5 p.m. (EST)</p>
+              <p id="phonetxt">855.967.3787</p>
+              <p id="contacttxt">International +1.617.963.0555</p>
+            </div>
+          </div>
+        </div>
+        <p class="imjustaline"></p>
+        <p class="blue" id="titletxt">Clients and Servers</p>
+        <p>Computers connected to the <span class="lightblue">Web</span> are called <strong>clients</strong> and <strong>servers</strong>.</p>
+        <ul>
+          <li><span class="lightblue">Clients</span> are the typical Web user's Internet-connected devices (for example, your computed connected to your Wi-Fi, or your phone connected to your mobile network) and <span class="lightblue">Web-assessing software</span> avaliable on those devices (usually a web browser like Firefox or Chrome).
+          </li>
+          <li><span class="lightblue">Servers</span> are computers that store <span class="lightblue">webpages</span>, <span class="lightblue">sites</span>, or <span class="lightblue">apps</span>. When a client device wants to access a webpage, a copy of the webpage is downloaded from the server onto the client machine to be displayed in the user's web browser.
+          </li>
+        </ul>
+        <img src="./images/client_server.jpg" alt="Client - Server" id="clientpic">
+        <p class="blue" id="titletxt">So What Actually Happens?</p>
+        <ol>
+          <li>The browser goes to the <span class="lightblue">DNS server</span> and finds the real addreess of the <span class="lightblue">server</span> that the website lives on.
+          </li>
+          <li>The browser sends an <span class="lightblue">HTTP request</span> message to the server asking it to send a copy of the website to the client.</li>
+          <li>If the server approves the client's request, the server sends the client a <span class="lightblue">"200 OK" message</span>, which means "Permission granted! Here you go!", and then starts sending the website's files to the browser as a series of small chunks.
+          </li>
+          <li>The browser assembles the small chunks into a complete website and displays it to you!</li>
+        </ol>
+        <div id="bottombar">
+          <img src="./images/html.png" alt="HTML" id="htmlpic">
+          <div id="bigthree">
+            <p id="titletxt" class="blue">The Big 3 - HTML, CSS, JavaScript</p>
+            <p>While the server can proocess information in many different languages, the files that they serve to the client are always going to be some combination of HTML, CSS, and JavaScript!</p>
+            <p>Learn more about the Big 3 <span class="lightblue">here</span>!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

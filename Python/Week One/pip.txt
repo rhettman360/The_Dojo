@@ -1,0 +1,23 @@
+pip install Django
+This installs Django
+
+pip list
+This appears to list the programs that are tied to pip and their software versions
+
+pip install Django (the second time)
+It notifies that the software has already been installed and is up to date
+
+pip freeze
+It outputs the installed programs in a requirements format
+
+First cd into your Desktop directory (cd ~/Desktop), then run this command: pip freeze > requirements.txt. What do you see when you ls? What's inside this file?
+It saves a txt file with the list of programs in the requirements format
+
+pip uninstall Django
+Uninstall Django
+
+pip show Django
+Lists all the program information for Django
+
+pip search Flask
+Possibly a list of all the programs containing any relation to the word flask?

@@ -1,0 +1,78 @@
+Microsoft Windows [Version 10.0.15063]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\rhett>dir
+ Volume in drive C is OS
+ Volume Serial Number is B439-78A4
+
+ Directory of C:\Users\rhett
+
+08/14/2017  08:44 AM    <DIR>          .
+08/14/2017  08:44 AM    <DIR>          ..
+08/14/2017  12:05 PM    <DIR>          .atom
+07/31/2017  06:14 PM    <DIR>          .vscode
+08/14/2017  08:34 AM    <DIR>          Contacts
+08/14/2017  11:00 AM    <DIR>          Desktop
+08/14/2017  08:34 AM    <DIR>          Documents
+08/14/2017  09:57 AM    <DIR>          Downloads
+07/21/2017  10:56 PM    <DIR>          Dropbox
+08/14/2017  08:34 AM    <DIR>          Favorites
+08/14/2017  08:34 AM    <DIR>          Links
+08/14/2017  08:34 AM    <DIR>          Music
+08/14/2017  08:35 AM    <DIR>          OneDrive
+08/14/2017  08:34 AM    <DIR>          Pictures
+02/01/2017  06:08 PM    <DIR>          Roaming
+08/14/2017  08:34 AM    <DIR>          Saved Games
+08/14/2017  08:34 AM    <DIR>          Searches
+08/14/2017  08:34 AM    <DIR>          Videos
+               0 File(s)              0 bytes
+              18 Dir(s)  55,455,113,216 bytes free
+
+C:\Users\rhett>cd Desktop
+
+C:\Users\rhett\Desktop>md test
+
+C:\Users\rhett\Desktop>cd
+C:\Users\rhett\Desktop
+
+C:\Users\rhett\Desktop>cd test
+
+C:\Users\rhett\Desktop\test>copy NUL index.html
+        1 file(s) copied.
+
+C:\Users\rhett\Desktop\test>copy NUL styles.css
+        1 file(s) copied.
+
+C:\Users\rhett\Desktop\test>copy NUL commands.txt
+        1 file(s) copied.
+
+C:\Users\rhett\Desktop\test>copy index.html index_2.html
+        1 file(s) copied.
+
+C:\Users\rhett\Desktop\test>cd ..
+
+C:\Users\rhett\Desktop>md destination
+
+C:\Users\rhett\Desktop>move c:\users\rhett\desktop\test\index_2.html c:\users\rhett\desktop\destination
+        1 file(s) moved.
+
+C:\Users\rhett\Desktop>cd destination
+
+C:\Users\rhett\Desktop\destination>dir
+ Volume in drive C is OS
+ Volume Serial Number is B439-78A4
+
+ Directory of C:\Users\rhett\Desktop\destination
+
+08/14/2017  01:48 PM    <DIR>          .
+08/14/2017  01:48 PM    <DIR>          ..
+08/14/2017  01:45 PM                 0 index_2.html
+               1 File(s)              0 bytes
+               2 Dir(s)  55,454,138,368 bytes free
+
+C:\Users\rhett\Desktop\destination>cd ..
+
+C:\Users\rhett\Desktop>del destination
+C:\Users\rhett\Desktop\destination\*, Are you sure (Y/N)? y
+
+C:\Users\rhett\Desktop>rd destination

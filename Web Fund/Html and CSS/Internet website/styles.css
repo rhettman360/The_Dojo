@@ -1,0 +1,262 @@
+/*************************/
+/*     Universal Text    */
+/*    and all that Jazz  */
+/*************************/
+
+*{
+ margin: 0px;
+ padding: 0px;
+}
+body{
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+#container{
+  background-color: white;
+  width: 970px;
+  height: 885px;
+  margin: 0px auto;
+}
+.blue{
+  color: #296aa1;
+}
+.white{
+  color: white;
+}
+.orange{
+  color: #d9231c;
+}
+.lightblue{
+  color: #00bfdf;
+}
+ul li,ol li{
+  margin-left: 40px;
+}
+
+/*************************/
+/*       Header          */
+/*************************/
+
+#header{
+  /*background-color: blue;*/
+  width: inherit;
+  height: 200px;
+}
+#globe{
+  height: 70%;
+  width: 14.4%;
+  position: relative;
+    z-index: 1;
+  display: inline-block;
+}
+#headtitle{
+  margin-top: 30px;
+  vertical-align: top;
+  display: inline-block;
+  color: #707070;
+  font-size: 50pt;
+}
+#contentbar{
+  height: 70px;
+  width: inherit;
+  position: relative;
+    bottom: 25px;
+    z-index: 0;
+  background: linear-gradient(#2b6aa1, #4d7fa9, #2b6aa1);
+}
+.contentbartxt{
+  font-size: 30pt;
+  vertical-align: middle;
+  line-height: 70px;
+  color: white;
+}
+
+/*************************/
+/*       sidebar         */
+/*************************/
+
+#sidebar{
+  /*background-color: green;*/
+  width: 215px;
+  height: 580px;
+  /*margin-top: 20px;*/
+  padding-left: 10px;
+  display: inline-block;
+}
+#blacktext{
+  padding-top: 20px;
+  font-size: 15pt;
+  font-weight: bold;
+}
+#sidetext{
+  margin-top: 15px;
+  font-size: 12.5pt;
+  font-weight: bold;
+}
+.sidebutton{
+  height: 35px;
+  border-radius: 5px;
+  line-height: 35px;
+  text-align: center;
+  color: white;
+  font-size: 15pt;
+  box-shadow: 2px 2px 2px grey;
+}
+#bluebutton{
+  margin-top: 25px;
+  background: linear-gradient(to bottom, #72a1c8, #3e709a);
+}
+#orangebutton{
+  margin-top: 5px;
+  background: linear-gradient(to bottom, #e8be85, #e07c1d);
+}
+.imjustaline{
+  width: inherit;
+  height: 1px;
+  background-color: gray;
+  margin-top: 25px;
+  box-shadow: 1px 1px gray;
+}
+#adspace{                    /*  <--------CONTAINER FOR THE AD  */
+  margin-top: 25px;
+  width: 215px;
+  height: 314px;
+}
+#adbackground{
+  box-shadow: 2px 2px 5px grey;
+  position: relative;
+    z-index: 0;
+  display: inline-block;
+}
+#adtext{
+  position: relative;
+    z-index: 1;
+    bottom: 300px;
+  text-align: center;
+  font-size: 20pt;
+}
+#adninja{
+  width: 86px;
+  height: 123px;
+  position: relative;
+    z-index: 1;
+    bottom: 295px;
+    left: 60px;
+}
+#adbutton{
+  height: 35px;
+  border-radius: 5px;
+  line-height: 35px;
+  text-align: center;
+  color: white;
+  font-size: 15pt;
+  box-shadow: 2px 2px 2px #282828;
+  position: relative;
+    z-index: 1;
+    bottom: 285px;
+    left: 10px;
+  background: linear-gradient(to bottom, #7dd0df, #00bfdf);
+  display: inline-block;
+  padding: 0px 30px 0px 30px;
+}
+
+/*************************/
+/*    main_content       */
+/*************************/
+
+#main_content{
+  /*background-color: lightblue;*/
+  width: 700px;
+  height: 680px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 40px;
+}
+#main_header{
+  height: 70px;
+  width: inherit;
+  /*background-color: blue;*/
+}
+#home{
+  height: 22px;
+  width: 22px;
+  display: inline-block;
+  vertical-align: top;
+}
+#bodytitle{
+  display: inline-block;
+  font-size: 17pt;
+  vertical-align: top;
+}
+#contactwrapper{             /*  <--------CONTAINER FOR THE CONTACT INFO */
+  margin-left: 360px;
+  display: inline-block;
+  height: 70px;
+  width: 260px;
+  /*background-color: red;*/
+}
+#textwrapper{
+  margin-left: 0px;
+  display: inline-block;
+  height: inherit;
+  width: 200px;
+  /*background-color: purple;*/
+}
+#phone{
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+#contacttxt{
+  text-align: center;
+  font-size: 10pt;
+  vertical-align: top;
+  color: #575757;
+}
+#phonetxt{
+  text-align: center;
+  font-size: 20pt;
+  vertical-align: top;
+  font-weight: bold;
+  color: #00bfdf;
+}
+#titletxt{
+  font-weight: bold;
+  font-size: 16pt;
+  margin-bottom: 5px;
+}
+#clientpic{
+  height: 84px;
+  width: 230px;
+  margin-left: 235px;
+  margin-bottom: 20px;
+}
+#bottombar{
+  margin-top: 20px;
+  height: 132px;
+  width: 680px;
+  box-shadow: 2px 0px 5px gray;
+  border-style: solid;
+  border-color: #00bfdf;
+  border-width: 5px 5px 0px 5px;
+}
+#htmlpic{
+  height: 75%;
+  width: 14.56%;
+  margin-left: 17px;
+  margin-top: 17px;
+  display: inline-block;
+}
+#bigthree{
+  display: inline-block;
+  height: 102px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 540px;
+  /*background-color: yellow;*/
+  vertical-align: top;
+}
