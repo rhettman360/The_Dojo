@@ -6,7 +6,7 @@ def oddEven():
             print "Number is", count, ". This is an even number."
         if(count % 2 != 0):
             print "Number is", count, ". This is an odd number."
-# oddEven()
+oddEven()
 ################################################################################
 
 #MULTIPLY
@@ -19,7 +19,7 @@ def multiply(x, b):
         x[count] = x[count] * b
     print x
 
-# multiply(a, 5)
+multiply(a, 5)
 ################################################################################
 
 arr = [2,4,5]
@@ -29,10 +29,10 @@ def layeredMultiples(y):
     for element in y:
         mul = []
         while element > 0:
-            print element
+            # print element
             element = element - 1
             mul.append(1)
-            print mul
+            # print mul
         newarr.append(mul)
     print newarr
 
