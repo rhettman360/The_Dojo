@@ -8,6 +8,7 @@ class Cards(object):
         self.suit = suit
         self.value = value
 
+################################################################################
 
 def createDeck():
     deck = []
@@ -19,6 +20,8 @@ def createDeck():
             cardVal = [card]
             deck.append([suitVal, cardVal])
     return deck
+
+################################################################################
 
 def intepretDeck(a):
     wordDeck = []
@@ -47,6 +50,8 @@ def intepretDeck(a):
             wordDeck.append(element[1][0])
     return wordDeck
 
+################################################################################
+
 def condenseDeck(b):
     condDeck = []
     for pair in range (0, len(b)):
@@ -59,6 +64,8 @@ def condenseDeck(b):
     shuffle(condDeck)
     return condDeck
 
+################################################################################
+
 # def drawCard(c):
 #     print "You drew the", c[0][1], "of", c[0][0] + ","
 #     print "The", c[1][1], "of", c[1][0] + ","
@@ -68,10 +75,24 @@ def condenseDeck(b):
 #     print "he", c[5][1], "of", c[5][0] + ","
 #     print "and the", c[6][1], "of", c[6][0] + "."
 
-x = condenseDeck(intepretDeck(createDeck()))
-hand = Cards(x[0][0], x[0][1])
+################################################################################
+#IF YOU WANT TO DRAW A 5 CARD HAND:
 
-print hand.suit, "of", hand.value
+x = condenseDeck(intepretDeck(createDeck()))
+
+hand = {}
+for count in range (0, 5):
+    hand[str(x[count][1])] = str(x[count][0])
+    # print "You drew:"
+for key,data in hand.iteritems():
+     print key, "of", data
+
+################################################################################
+#IF YOU WANT TO DRAW A SINGLE CARD
+
+# x = condenseDeck(intepretDeck(createDeck()))
+# hand = Cards(x[0][0], x[0][1])
+# print hand.suit, "of", hand.value
 
 
 
