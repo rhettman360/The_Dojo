@@ -1,0 +1,5 @@
+Select - Tells the database to pull information from a certain table. ex, SELECT first_name, last_name FROM users displays all the information in the first_name and last_name columns in the users table
+Update - Changes values already present on a table
+Insert - Manipulates the database by inserting values into a table
+Delete - Deletes records
+Join - Used to bind tables together using a foreign key
