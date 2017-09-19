@@ -1,0 +1,58 @@
+1. call djangoEnv/Scripts/activate
+
+2. django-admin startproject [nameofproject_project]
+
+3. mkdir apps (first level, where manage.py is)
+
+4. cd apps
+
+5. touch __init__.py
+
+6. django-admin startapp [app_name]
+
+7. cd [app_name]
+
+8. touch urls.py
+
+9. mkdir templates
+
+10. cd templates
+
+11. mkdir [app_name]
+
+12. create index.html in [app_name]
+
+13. edit manage.py
+
+14. add "apps.[app_name]", to installed apps
+
+15. python manage.py runserver
+
+16. edit urls.py, add:
+from django.conf.urls import url, include
+from django.contrib import admin
+
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    url(r'^[whatever/]', include('apps.home_app.urls'),
+]
+
+17. edit urls.py inside app
+from django.conf.urls import url
+from django.contrib import admin
+from . import views
+
+urlpatterns = [
+    url(r'^$', views.index),
+]
+
+19. edit views.py
+
+from django.shortcuts import render
+
+def index(request):
+
+    return render(request, 'home_app/index.html')
+
+
+20. profit

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    {% load static %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}">
+    <title>Amadon!!!!</title>
+  </head>
+  <body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      $('select').material_select();
+      });
+    </script>
+            <h3>Cart:</h3>
+            {{code|safe}}
+  </body>
+</html>
+
+<!-- <form action='/results' method='post'>
+  <div class='row'>
+    <cart>".format(csrf_string, productInfo['products']['item_id'][items])+ str(str(productInfo['products']['name'][items]) + " $"+str(productInfo['products']['price'][items])+ "rupies""
+      <div class='input-field col l1 offset-0'>
+        <select name= 'quantity' class='icons'>
+          <option value='' disabled selected>
+            <option name= 'quantity' value='1'>1</option>
+            <option name= 'quantity' value='2'>2</option>
+            <option name= 'quantity' value='3'>3</option>
+            <option name= 'quantity' value='4'>4</option>
+            <option name= 'quantity' value='5'>5</option>
+          </select><label>Quantity</label>
+        </div>
+        <input class='waves-effect waves-light btn' type='submit' value='checkout'>
+      </form>
+    </div> -->

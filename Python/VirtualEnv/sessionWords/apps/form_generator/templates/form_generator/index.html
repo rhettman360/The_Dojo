@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <title>Dojo Survey Index</title>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col l6">
+        <form action='/results' method='post'>
+          {% csrf_token %}
+            <h3>Add a Word:</h3>
+            <input type='text' name='name'><br>
+            <h3>Choose a Color:</h3>
+              <p>
+                <input class="with-gap" name="color" type="radio" id="ratio1" value="red-text"/>
+                <label for="ratio1">Red</label>
+              </p>
+              <p>
+                <input class="with-gap" name="color" type="radio" id="ratio2" value="blue-text"/>
+                <label for="ratio2">Blue</label>
+              </p>
+              <p>
+                <input class="with-gap" name="color" type="radio" id="ratio3" value="light-green-text"/>
+                <label for="ratio3">Green</label>
+              </p>
+            <p>
+              <input type="checkbox" id="ratio5" name="size" value="10"/>
+              <label for="ratio5">Large Text</label>
+            </p>
+            <input type='submit' value='Submit info'>
+        </form>
+      </div>
+      <div class="col l6 align-vertical">
+        <form action='/clear' method='post'>
+          {% csrf_token %}
+          <input type='submit' value='Clear'>
+        </form>
+        <h3>You have submitted {{ request.session.counter }} times</h3>
+        <h1>Submitted Info</h1>
+        {{formstring | safe}}
+      </div>
+    </div>
+  </body>
+</html>

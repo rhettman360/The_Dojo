@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The bane of my Fucking Existence</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+  </head>
+  <body>
+    {% csrf_token %}
+    <div class="card-panel">
+      <h5 class="blue-text text-darken-2">My gold:  {{request.session.gold_amt}}</h4>
+    </div>
+    <div class="row">
+      <div class="col s2"></div>
+      <form action="/farm" class="col s2" method="post">
+        {% csrf_token %}
+        <h2>Farm</h2>
+        <p>earns 10-20 golds</p>
+        <input type='submit' value='Find Gold!'>
+      </form>
+
+      <form action="/cave" class="col s2" method="post">
+        {% csrf_token %}
+        <h2>Cave</h2>
+        <p>earns 5-10 golds</p>
+        <input type='submit' value='Find Gold!'>
+      </form>
+
+      <form action="/house" class="col s2" method="post">
+        {% csrf_token %}
+        <h2>House</h2>
+        <p>earns 2-5 golds</p>
+        <input type='submit' value='Find Gold!'>
+      </form>
+
+      <form action="/casino" class="col s2" method="post">
+        {% csrf_token %}
+        <h2>Casino</h2>
+        <p>earns 0-50 golds</p>
+        <input type='submit' value='Find Gold!'>
+      </form>
+      <div class="col s2"></div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+      <form action='/clear' method='post'>
+        {% csrf_token %}
+        <input type='submit' value='Clear'>
+      </form>
+      <h5>Submitted Info</h5>
+      {% csrf_token %}
+      {{ historystring | safe }}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    {% load static %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}">
+    <title>Checkout!!!!!</title>
+  </head>
+  <body>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+    $('select').material_select();
+    });
+  </script>
+    <h4>Thank you for your business!</h4>
+    <h4>We charged your card for {{request.session.current}} rupies</h4>
+    <h4>You ordered {{request.session.items}} items so far and spent {{request.session.total}} rupies with Amadon.com!</h4>
+    <form action="/" method="post">
+      {% csrf_token %}
+      <button class="waves-effect waves-light btn" type="submit" name="button">Go Back</button>
+    </form>
+    <br>
+    <form action="/clear" method="post">
+      {% csrf_token %}
+      <button class="waves-effect waves-light btn" type="submit" name="button">Clear</button>
+    </form>
+  </body>
+</html>
