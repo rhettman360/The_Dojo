@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <title>Courses</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}">
+  </head>
+  <body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      $('select').material_select();
+      });
+    </script>
+  <div class="container">
+    <div class="row">
+      <h3>Add a new course</h3>
+      <form action="/add" method="post" class="col s6">
+        {%csrf_token%}
+        <input type="text" name="name" value="{{courses.name}}" placeholder="
+        Name:">
+        <input type="text" name="desc" value="{{courses.desc}}" placeholder="
+        Description:">
+        <input class="waves-effect waves-light btn" type="submit" value="Add">
+      </form>
+    </div>
+    <div class="row">
+      <h3>Courses</h3>
+      <table>
+      <tr>
+          <th>Course Name</th>
+          <th>Description</th>
+          <th>Date Added</th>
+          <th>Actions</th>
+      </tr>
+      {% for i in courses %}
+      <tr>
+          <td>{{i.name}}</td>
+          <td>{{i.desc}}</td>
+          <td>{{i.created_at}}</td>
+          <td><a href="/{{i.id}}/areyousure">remove</a></td>
+      </tr>
+      {%endfor%}
+      </table>
+    </div>
+  </div>
+  </body>
+</html>

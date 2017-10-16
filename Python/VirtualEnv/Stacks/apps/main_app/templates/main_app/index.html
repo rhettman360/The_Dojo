@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="/add" method="post">
+      {%csrf_token%}
+      <input type="text" name="value" placeholder="Enter number">
+      <input type="submit" value="Submit">
+    </form>
+    <form action="/remove" method="post">
+      {%csrf_token%}
+      <input type="submit" value="Remove">
+    </form>
+    {{request.session.stack}}
+  </body>
+</html>

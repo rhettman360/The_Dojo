@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> {% load static %}
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}">
+</head>
+
+<body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('select').material_select();
+        });
+    </script>
+    <div class="container">
+        <form method="POST" action='/users/{{users.id}}/update/'>
+            {% csrf_token %}
+            <h2>Edit User {{users.id}}</h2>
+            Full name : <br></br>
+            <input type='text' name="full_name" value="{{users.full_name}}">
+            <br></br>
+            Email : <br></br>
+            <input type='text' name="email" value={{users.email}}>
+            <br></br>
+            <input class="waves-effect waves-light btn" type='submit' value="Update">
+            <br></br>
+            <a href="/users/{{users.id}}/">Show</a> | <a href="/users/">Go back</a>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% load static %}
+    <title>Are you sure?</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}">
+  </head>
+  <body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      $('select').material_select();
+      });
+    </script>
+    <div class="container">
+      <form action="/" method="post">
+        {% csrf_token %}
+        <h3>Are you sure you want to delete the following course?</h3>
+        <h5>Name : {{courses.name}}</h5>
+        <h5>Description : {{courses.desc}}</h5>
+        <input type="submit" value="no">
+      </form>
+
+      <form action="/{{courses.id}}/delete" method="post">
+        {% csrf_token %}
+        <input type="submit" value="YES! I WANT TO KILL MYSELF">
+      </form>
+
+    </div>
+  </body>
+</html>

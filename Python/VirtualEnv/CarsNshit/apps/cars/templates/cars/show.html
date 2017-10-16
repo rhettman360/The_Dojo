@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% load static %}
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}">
+    </head>
+    <body>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
+      <script type="text/javascript">
+        $(document).ready(function() {
+        $('select').material_select();
+        });
+      </script>
+    <div class="container">
+      <a href="/logout">Logout</a> | <a href="/cars/add">Add a Car</a> | <a href="/cars">Go back</a>
+      <h5>{{user.first_name}} {{user.last_name}}</h5>
+      <p>Number of cars: {{user.cars.all.count}}</p>
+      {%for car in user.cars.all%}
+      {{ car.year }} {{ car.make }} {{ car.model }}<br>
+      {%endfor%}
+    </div>
+  </body>
+</html>

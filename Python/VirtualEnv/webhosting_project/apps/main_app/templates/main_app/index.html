@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  <body>
+      <h3>Check Avaliability</h3>
+      <form method="post" action="/checking">
+          {%csrf_token%}
+          <input type="text" name="url" placeholder="Enter name here">
+          <input type="submit" value="Check">
+      </form>
+      {% if messages %}
+          {% for message in messages%}
+              <p>{{message}}</p>
+          {% endfor %}
+      {% endif%}
+      <h3>Add to DB</h3>
+      <form method="post" action="/process">
+          {%csrf_token%}
+          <input type="text" name="url" placeholder="Re-enter name here">
+          <input type="submit" value="Add">
+      </form>
+  </body>
+</html>
